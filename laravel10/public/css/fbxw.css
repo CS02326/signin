@@ -1,0 +1,59 @@
+.publish-news {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+h1::before {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .publish-news {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    input, textarea {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%; /* 按钮在小屏幕上占据整个宽度 */
+        padding: 12px;
+    }
+}

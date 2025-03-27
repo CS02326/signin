@@ -1,0 +1,254 @@
+/* 禁用滚动条并保持页面布局 */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 禁用滚动条 */
+}
+
+/* 整个页面的容器 */
+.conse {
+    width: 100%; /* 确保页面宽度100% */
+    margin: 0 auto; /* 保证居中显示 */
+    padding: 0 15px; /* 左右留白15px，可根据需求调整 */
+}
+
+/* 针对小屏幕（如手机）进行调整 */
+@media (max-width: 768px) {
+    .rest-con::before,
+    .rest-con::after {
+        display: none; /* 保持隐藏 */
+    }
+
+    .lest-txt{
+        padding-top: 1.5vh;
+    }
+
+    .haed {
+        width: 100%;
+        background-size: cover; /* 确保背景图始终覆盖 */
+        background-position: center; /* 使背景图居中 */
+    }
+
+    .conse {
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .nwe {
+        display: block; /* 改为单列显示 */
+        text-align: center; /* 内容居中 */
+    }
+
+    .nwe > * {
+        margin-bottom: 15px;
+    }
+
+    h1::before {
+        display: none;
+        width: 24px;
+        height: 24px;
+    }
+
+    h1::after {
+        font-size: 24px;
+    }
+
+    .rest-con::before {
+        width: 32px;
+        height: 16px;
+    }
+
+    .rest-con::after {
+        width: 80%; /* 让横线宽度自适应 */
+        left: 10%;
+    }
+
+    .rest-txt::after {
+        font-size: 18px;
+    }
+
+    .lest-txt > ul {
+        flex-direction: column; /* 改为纵向排列 */
+        align-items: center;
+    }
+
+    .lest-txt > ul > li {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .lest-txt2-con {
+        flex-direction: column;
+        height: auto; /* 让容器高度自适应 */
+        padding: 0 0 20px 5px;
+        width: 100%; /* 确保容器宽度适应 */
+    }
+
+    .txt2-txt {
+        width: 100%; /* 文字占满容器宽度 */
+    }
+
+    .txt2-1 {
+        font-size: 18px; /* 标题文字大小 */
+        margin-bottom: 10px;
+    }
+
+    .txt2-2 {
+        font-size: 16px; /* 内容文字大小 */
+        -webkit-line-clamp: 3; /* 增加更多的行显示 */
+    }
+
+    /* 新闻图片铺满全屏 */
+    .img {
+        width: 100%;
+        height: auto; /* 保持比例 */
+        object-fit: cover; /* 确保图片覆盖整个区域 */
+    }
+
+    .publish-news-btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* 针对中等屏幕（如平板）进行调整 */
+@media (max-width: 1024px) {
+    .haed {
+        width: 100%;
+    }
+
+    .conse {
+        width: 100%; /* 调整宽度 */
+        padding-top: 20px;
+    }
+
+    .nwe {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    h1::after {
+        font-size: 28px;
+    }
+
+    .rest-con::before {
+        width: 38px;
+        height: 18px;
+    }
+
+    .rest-con::after {
+        width: 70%;
+    }
+
+    .lest-txt > ul {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .lest-txt > ul > li {
+        width: 100%; /* 适当减小宽度 */
+        margin-bottom: 15px;
+    }
+
+    .txt2-txt {
+        width: 75%; /* 文字占容器的三分之二 */
+    }
+
+    .txt2-1 {
+        font-size: 20px; /* 标题文字大小 */
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .txt2-2 {
+        -webkit-line-clamp: 2;
+    }
+
+    /* 新闻图片铺满全屏 */
+    .img {
+        width: 100%;
+        height: auto; /* 保持比例 */
+        object-fit: cover; /* 确保图片覆盖整个区域 */
+    }
+}
+
+/* 针对大屏幕（如桌面）进行调整 */
+@media (min-width: 1025px) {
+    .haed {
+        width: 100%;
+    }
+
+    .conse {
+        width: 1400px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .nwe {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1::before {
+        width: 34px;
+        height: 34px;
+    }
+
+    h1::after {
+        font-size: 32px;
+    }
+
+    .rest-con::before {
+        display: none;
+        width: 42px;
+        height: 20px;
+    }
+
+    .rest-con::after {
+        display: none;
+        width: 38%;
+    }
+
+    .lest-txt > ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .lest-txt > ul > li {
+        width: 33%;
+    }
+
+    .lest-txt2-con {
+        display: flex;
+        width: 100%;
+        height: 33%;
+        padding: 0 0 30px 5px;
+    }
+
+    .txt2-txt {
+        width: 80%;
+    }
+
+    .txt2-1 {
+        font-size: 24px; /* 标题文字大小 */
+        margin-bottom: 15px;
+    }
+
+    .txt2-2 {
+        -webkit-line-clamp: 2;
+    }
+
+    /* 新闻图片铺满全屏 */
+    .img {
+        width: 100%;
+        height: auto; /* 保持比例 */
+        object-fit: cover; /* 确保图片覆盖整个区域 */
+    }
+}

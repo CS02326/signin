@@ -1,0 +1,151 @@
+/* 页面背景和中心化布局 */
+body {
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 使页面高度至少为屏幕高度 */
+    margin: 0;
+}
+
+/* 登录框样式 */
+.box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    transition: width 0.3s ease; /* 增加平滑过渡 */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-item input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-item input:focus {
+    border-color: #40a9ff;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-actions .el-button {
+    width: 48%;
+}
+
+.el-button {
+    font-size: 16px;
+    height: 40px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #5b86e5, #36d1dc);
+}
+
+/* 响应式调整 */
+
+/* 小屏幕（最大宽度500px） */
+@media (min-width: 500px) {
+    body {
+        margin: 0; /* 去除 body 默认外边距 */
+        padding: 0; /* 去除 body 默认内边距 */
+        width: 100%;
+        height: 100vh; /* 确保 body 的高度为视口高度 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-actions {
+        display: flex;
+
+    }
+    .box {
+        width: 100%; /* 占满整个屏幕宽度 */
+        height: 100%; /* 填满整个屏幕高度 */
+        padding: 8px; /* 调整内边距 */
+        box-sizing: border-box; /* 确保内边距不影响整体布局 */
+        margin: 0; /* 去除外边距 */
+        border-radius: 0; /* 去除圆角 */
+        box-shadow: none; /* 去除阴影 */
+    }
+
+    .form-item input {
+        font-size: 14px; /* 调整输入框字体适配 */
+    }
+
+    button[type="submit"] {
+        font-size: 14px; /* 调整按钮字体适配 */
+        height: 40px; /* 调整按钮高度 */
+    }
+}
+
+
+/* 中等屏幕（最大宽度768px） */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-item input {
+        font-size: 15px;
+    }
+
+    button[type="submit"] {
+        font-size: 15px;
+        height: 38px;
+    }
+}
+
+/* 大屏幕（大于768px） */
+@media (min-width: 769px) {
+    .box {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-item input {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+        height: 40px;
+    }
+}

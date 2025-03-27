@@ -1,0 +1,108 @@
+.register-form {
+    width: 100%; /* 让 .register-form 始终占满 100% 宽度 */
+    max-width: 400px; /* 最大宽度限制为 400px */
+    margin: 0 auto; /* 使 .register-form 居中 */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* 响应式调整 */
+
+/* 小屏幕（最大宽度500px） */
+@media (max-width: 500px) {
+    .register-form {
+        padding: 0;
+    }
+
+    input {
+        font-size: 14px; /* 输入框字体大小适应小屏幕 */
+    }
+
+    button {
+        font-size: 14px; /* 按钮字体大小调整 */
+    }
+
+    h2 {
+        font-size: 18px; /* 标题字体大小调整 */
+    }
+}
+
+/* 中等屏幕（最大宽度768px） */
+@media (max-width: 768px) {
+    .register-form {
+        border: none;
+    }
+
+    input {
+        font-size: 15px; /* 输入框字体大小适中 */
+    }
+
+    button {
+        font-size: 15px; /* 按钮字体大小适中 */
+    }
+
+    h2 {
+        font-size: 20px; /* 标题字体大小适中 */
+    }
+}
+
+/* 大屏幕（最小宽度769px） */
+@media (min-width: 769px) {
+    .register-form {
+        padding: 20px; /* 保持默认内边距 */
+    }
+
+    input {
+        font-size: 16px; /* 输入框字体默认大小 */
+    }
+
+    button {
+        font-size: 16px; /* 按钮字体默认大小 */
+    }
+
+    h2 {
+        font-size: 24px; /* 标题字体大小默认 */
+    }
+}

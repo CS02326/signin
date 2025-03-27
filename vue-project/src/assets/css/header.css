@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.haed{
+    width: 1903px;
+    background-image: url("../im/yw.jpg");
+}
+.conse{
+    padding-top: 30px;
+    width: 1400px;
+    margin: 0 auto;
+}
+.nwe{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+h1::before {
+    content: "";
+    display: inline-block;
+    width: 34px;  /* 设置图片的宽度 */
+    height: 34px; /* 设置图片的高度 */
+    background-image: url('../im/CD2D2AD79186FCDA11D52D7EA06F42CF.png'); /* 图片的URL */
+    background-size: cover; /* 确保图片填满伪元素 */
+}
+
+h1::after {
+    margin-left: -5px;
+    content: " 新闻"; /* 添加的内容 */
+    font-size: 32px; /* 设置字体大小 */
+    color: blue; /* 设置字体颜色 */
+}
+.rest-con::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* 使图片和圆圈垂直居中 */
+    left: calc(50% - 10px - 20px); /* 使图片位于圆圈的前面，减去图片宽度 */
+    width: 42px; /* 圆圈的直径 */
+    height: 20px; /* 圆圈的直径 */
+    background-image: url('../im/more-dian.gif'); /* 设置背景图片 */
+    background-size: cover; /* 确保图片覆盖整个圆圈 */
+    background-position: center; /* 确保图片居中显示 */
+    border-radius: 50%; /* 使其变成圆形 */
+}
+.rest-con::after {
+    content: "";
+    position: absolute;
+    top: 70%; /* 设置中线位置 */
+    left: 50%;
+    width: 38%; /* 设置线条宽度 */
+    border-top: 2px solid #005597; /* 设置线条的粗细和颜色 */
+}
+.rest-txt::after {
+    content: "查看更多"; /* 添加的内容 */
+    font-size: 21px; /* 设置字体大小 */
+    color: darkorange; /* 设置字体颜色 */
+    margin-right: 20px;
+    position: relative; /* 设置相对定位 */
+    top: 10px; /* 调整此值来控制向下的距离 */
+}
+.lest-txt{
+    padding-top: 100px;
+}
+img{
+    width: 100%;
+}
+.lest-txt>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.lest-txt>ul>li{
+    width: 33%;
+    background-color: #ffffff;
+}
+.txt ,.text{
+    width: 100%;           /* 使元素宽度为100% */
+    white-space: nowrap;   /* 防止文本换行 */
+    overflow: hidden;      /* 隐藏超出部分 */
+    text-overflow: ellipsis; /* 超出部分用省略号显示 */
+    font-size: 18px;
+    padding: 10px 0 10px 0;
+}
+.lest-txt2-con {
+    display: flex;             /* 使用 Flexbox 布局 */
+    width: 100%;               /* 使容器宽度为100% */
+    overflow: hidden; /* 隐藏超出部分 */
+    height: 33%;
+    padding:0 0 30px 5px;
+}
+
+.txt2-txt {
+    width: 80%; /* 文字占容器的三分之二 */
+    overflow: hidden;          /* 隐藏超出部分 */
+}
+.txt2-1{
+    white-space: nowrap;           /* 防止换行 */
+    overflow: hidden;              /* 超出部分隐藏 */
+    text-overflow: ellipsis;       /* 超出部分显示省略号 */
+    font-size: 18px;
+    padding-bottom: 20px;
+
+}
+.txt2-2 {
+    display: -webkit-box;             /* 使用弹性盒子模型 */
+    -webkit-box-orient: vertical;     /* 设置为纵向排列 */
+    -webkit-line-clamp: 2;            /* 限制显示两行 */
+    overflow: hidden;                 /* 隐藏超出的文本 */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+
